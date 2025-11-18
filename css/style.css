@@ -36,6 +36,7 @@
 body {
   background-color: var(--purple-700);
 }
+/* Layout */
 .page-container {
   min-height: 100vh;
   max-width: 81rem;
@@ -48,31 +49,31 @@ body {
   background-position: top center;
 }
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--spacing-md);
+  width: 90%;
+  height: 100%;
+  margin: auto;
 }
-.logo {
-  align-self: flex-start;
+.header,
+.intro,
+.footer {
+  padding-block: var(--spacing-sm);
 }
 .logo-img {
-  width: min(11.25rem, 10vw); /* 180px */
+  width: min(11.25rem, 40vw); /* 180px */
   min-width: 8.125rem; /* 130px */
-}
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .intro-img {
   max-inline-size: 100%;
   block-size: auto;
 }
 .intro-content {
-  width: 88%;
-  max-width: 30rem; /* 485px */
-  margin-block-start: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+
+  padding-block: var(--spacing-md);
+
   font-family: var(--ff-body);
   text-align: center;
   color: var(--white);
@@ -82,11 +83,12 @@ body {
   font-family: var(--ff-heading);
   font-size: var(--fs-lg);
   font-weight: var(--fw-semibold);
+  max-inline-size: 20ch;
 }
 .intro-description {
-  margin-block: var(--spacing-md);
   font-size: var(--fs-md);
   font-weight: var(--fw-regular);
+  max-inline-size: 31ch;
 }
 .intro-btn {
   display: inline-block;
@@ -96,6 +98,7 @@ body {
   width: 11rem; /* 180px */
   text-align: center;
   border-radius: var(--border-radius-md);
+  border: none;
   background-color: var(--white);
   color: var(--purple-700);
   cursor: pointer;
@@ -120,8 +123,8 @@ body {
   align-items: center;
   justify-content: center;
 
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
 
   padding: 0.4rem;
   border: 1px solid var(--white);
@@ -129,33 +132,42 @@ body {
   transition: 0.2s ease;
 }
 .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.25rem;
+  height: 1.25rem;
   color: var(--white);
+  transition: 0.2s ease;
 }
-.social-link:hover {
+.social-link:hover,
+.social-link:focus-visible {
   border: 1px solid var(--magenta-400);
 }
-.social-link:hover .icon {
+.social-link:hover .icon,
+.social-link:focus-visible {
   color: var(--magenta-400);
 }
 /* Media Queries */
 @media (min-width: 64rem) {
   .page-container {
     background-image: url("../assets/images/bg-desktop.svg");
-    background-size: contain;
-    background-position: top left;
+    background-size: cover;
   }
   .intro {
-    flex-direction: row;
-    align-items: flex-start;
+    display: flex;
     gap: var(--spacing-xl);
   }
   .intro-content {
-    max-width: 32.5rem; /* 520px */
+    align-items: start;
     text-align: left;
   }
-  .social-nav {
-    align-self: flex-end;
+  .intro-description {
+    max-inline-size: 60ch;
+  }
+  .social-list {
+    justify-content: flex-end;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .social-link {
+    transition-duration: 0.01ms;
   }
 }
