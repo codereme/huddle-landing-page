@@ -18,26 +18,15 @@ Users should be able to:
 
 ## Screenshots
 
-<div style="display:flex; align-items:start; flex-wrap:wrap; gap: 10px;">
-<figure>
+<div style="display:flex; align-items:start; gap: 10px;">
 <img src="./assets/screenshots/mobile-screenshot.png" alt="Mobile screenshot" width="230">
-  <figcaption>Mobile</figcaption>
-</figure>
-<figure>
-<img src="./assets/screenshots/tablet-screenshot.png" alt="Table screenshot" width="230">
-  <figcaption>Tablet</figcaption>
-</figure>
-<figure>
-
+<img src="./assets/screenshots/tablet-screenshot.png" alt="Table screenshot" width="230">  
 <img src="./assets/screenshots/desktop-screenshot.png" alt="Desktop screenshot" width="500">
-  <figcaption>Desktop</figcaption>
-</figure>
-
 </div>
 
 ## Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/](https://www.frontendmentor.io/solutions)
+- Solution URL: [https://www.frontendmentor.io/solutions/landing-page-with-intro-section-using-flexbox-W3_qsA-9bD](https://www.frontendmentor.io/solutions/landing-page-with-intro-section-using-flexbox-W3_qsA-9bD)
 - Live Site URL: [https://codereme.github.io/huddle-landing-page](https://codereme.github.io/huddle-landing-page)
 
 ## Author
